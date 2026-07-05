@@ -87,20 +87,19 @@ h2 em{font-style:italic;color:var(--gold)}
 .sc-time{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.04);border:1px solid var(--border2);padding:4px 12px;font-size:11px;color:var(--muted)}
 .sc-best{font-size:11px;color:var(--muted);font-style:italic;max-width:400px;line-height:1.4}
 
-.sc-price-col{background:var(--dark);border-left:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 24px;text-align:center;min-width:160px}
-.sc-price-label{font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.sc-price-val{font-family:'Fraunces',serif;font-size:24px;font-weight:900;line-height:1.1;margin-bottom:4px}
-.sc-price-note{font-size:10px;color:var(--muted);line-height:1.4;max-width:120px}
-.service-card.s1 .sc-price-val{color:var(--gold)}
-.service-card.s2 .sc-price-val{color:var(--teal-l)}
-.service-card.s3 .sc-price-val{color:var(--green-l)}
-.service-card.s4 .sc-price-val{color:var(--orange)}
-.service-card.s5 .sc-price-val{color:var(--red)}
-.service-card.s6 .sc-price-val{color:var(--purple-l)}
-.service-card.s7 .sc-price-val{color:var(--blue)}
+.sc-value-col{background:var(--dark);border-left:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 24px;text-align:center;min-width:180px;gap:10px}
+.sc-value-label{font-size:8px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.sc-value-icon{font-size:28px;line-height:1}
+.sc-value-note{font-size:11px;color:var(--off);line-height:1.5;max-width:140px}
+.service-card.s1 .sc-value-icon{color:var(--gold)}
+.service-card.s2 .sc-value-icon{color:var(--teal-l)}
+.service-card.s3 .sc-value-icon{color:var(--green-l)}
+.service-card.s4 .sc-value-icon{color:var(--orange)}
+.service-card.s5 .sc-value-icon{color:var(--red)}
+.service-card.s6 .sc-value-icon{color:var(--purple-l)}
+.service-card.s7 .sc-value-icon{color:var(--blue)}
 
-.sc-cta{display:block;margin-top:16px;background:var(--border2);color:var(--off);font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:10px 16px;text-decoration:none;text-align:center;transition:all .15s;border:1px solid transparent}
-.sc-cta:hover{background:var(--gold);color:var(--black);border-color:var(--gold)}
+/* (per-card CTA button removed — single page-level contact CTA used instead) */
 
 /* BUNDLE */
 .bundle{background:var(--card);border:1px solid var(--gold);padding:32px;margin-top:32px;position:relative;overflow:hidden}
@@ -110,9 +109,7 @@ h2 em{font-style:italic;color:var(--gold)}
 .bundle-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:580px}
 .bundle-includes{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
 .bi-tag{background:var(--gold-dim);border:1px solid rgba(212,168,50,.2);color:var(--gold);font-size:11px;font-weight:700;padding:4px 14px}
-.bundle-pricing{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
-.bundle-was{font-size:14px;color:var(--muted);text-decoration:line-through}
-.bundle-price{font-family:'Fraunces',serif;font-size:36px;font-weight:900;color:var(--gold);line-height:1}
+.bundle-pricing{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 .bundle-save{background:var(--green-bg);border:1px solid var(--green-l);color:var(--green-l);font-size:11px;font-weight:700;padding:4px 14px}
 
 /* HOW IT WORKS */
@@ -143,7 +140,7 @@ footer span{color:var(--gold)}
 
 @media(max-width:720px){
   .topbar{padding:12px 18px}.hero{padding:56px 20px 44px}.wrap{padding:0 18px}
-  .sc-inner{grid-template-columns:1fr}.sc-price-col{border-left:none;border-top:1px solid var(--border);flex-direction:row;justify-content:flex-start;gap:20px;padding:16px 28px}
+  .sc-inner{grid-template-columns:1fr}.sc-value-col{border-left:none;border-top:1px solid var(--border);flex-direction:row;justify-content:flex-start;gap:16px;padding:16px 28px}
   .sc-includes{grid-template-columns:1fr}
   .sc-body{padding:20px 20px}
 }
@@ -160,7 +157,7 @@ footer span{color:var(--gold)}
 <div class="hero">
   <div class="hero-pill">DFY Services — Results Without the Course</div>
   <h1>We Do the Work.<br><em>You Get the Result.</em></h1>
-  <p class="hero-sub">For Ghana clothing retailers who want specific problems solved — not a full program. Pick your problem, we handle the solution.</p>
+  <p class="hero-sub">For Ghana clothing retailers who want specific problems solved — not a full program. Pick your problem, message us, and we'll walk you through exactly how we solve it for you.</p>
   <div class="hero-pills">
     <div class="hp">📦 Sourcing & Shipping</div>
     <div class="hp">💳 Payment Access</div>
@@ -203,11 +200,10 @@ footer span{color:var(--gold)}
             <div class="sc-best">Best for: Retailers with $2,500+ buying budget who want the result without the logistics</div>
           </div>
         </div>
-        <div class="sc-price-col">
-          <div class="sc-price-label">Service Fee</div>
-          <div class="sc-price-val">12%<br>of goods</div>
-          <div class="sc-price-note">+ $150 handling · Min $2,500 in goods</div>
-          <a class="sc-cta" href="https://wa.me/15517750655?text=Hi%2C%20I%27m%20interested%20in%20the%20Full%20Shipment%20Service" target="_blank">Get Started →</a>
+        <div class="sc-value-col">
+          <div class="sc-value-icon">📦</div>
+          <div class="sc-value-label">Most Requested</div>
+          <div class="sc-value-note">Full sourcing-to-warehouse handled for you, start to finish</div>
         </div>
       </div>
     </div>
@@ -232,11 +228,10 @@ footer span{color:var(--gold)}
             <div class="sc-best">Best for: Retailers who have inventory they want to buy but can't get past the payment barrier</div>
           </div>
         </div>
-        <div class="sc-price-col">
-          <div class="sc-price-label">One-Time Fee</div>
-          <div class="sc-price-val">GH₵ 1,200</div>
-          <div class="sc-price-note">Fixed · No hidden extras</div>
-          <a class="sc-cta" href="https://wa.me/15517750655?text=Hi%2C%20I%27m%20interested%20in%20the%20Payment%20Setup%20service" target="_blank">Book Session →</a>
+        <div class="sc-value-col">
+          <div class="sc-value-icon">💳</div>
+          <div class="sc-value-label">Quick Win</div>
+          <div class="sc-value-note">One session, and the payment barrier is gone for good</div>
         </div>
       </div>
     </div>
@@ -261,11 +256,10 @@ footer span{color:var(--gold)}
             <div class="sc-best">Best for: Retailers who have tried to find a buyer themselves and failed, or been burned by unreliable contacts</div>
           </div>
         </div>
-        <div class="sc-price-col">
-          <div class="sc-price-label">One-Time Fee</div>
-          <div class="sc-price-val">GH₵ 3,500</div>
-          <div class="sc-price-note">Fixed · Includes 60-day monitoring</div>
-          <a class="sc-cta" href="https://wa.me/15517750655?text=Hi%2C%20I%27m%20interested%20in%20the%20Sourcing%20Agent%20Setup%20service" target="_blank">Enquire →</a>
+        <div class="sc-value-col">
+          <div class="sc-value-icon">🤝</div>
+          <div class="sc-value-label">High Value</div>
+          <div class="sc-value-note">A trusted buyer, vetted with 12 years of sourcing relationships</div>
         </div>
       </div>
     </div>
@@ -290,11 +284,10 @@ footer span{color:var(--gold)}
             <div class="sc-best">Best for: Retailers who know their margins feel wrong but can't pinpoint where the calculation is off</div>
           </div>
         </div>
-        <div class="sc-price-col">
-          <div class="sc-price-label">One-Time Fee</div>
-          <div class="sc-price-val">GH₵ 2,500</div>
-          <div class="sc-price-note">Fixed · Tool yours forever</div>
-          <a class="sc-cta" href="https://wa.me/15517750655?text=Hi%2C%20I%27m%20interested%20in%20the%20Pricing%20System%20Build" target="_blank">Get Started →</a>
+        <div class="sc-value-col">
+          <div class="sc-value-icon">📊</div>
+          <div class="sc-value-label">Operational</div>
+          <div class="sc-value-note">A custom pricing tool you keep and use on every future shipment</div>
         </div>
       </div>
     </div>
@@ -319,11 +312,10 @@ footer span{color:var(--gold)}
             <div class="sc-best">Best for: Retailers with significant capital locked in slow-moving stock who need it freed to buy again</div>
           </div>
         </div>
-        <div class="sc-price-col">
-          <div class="sc-price-label">Fee Structure</div>
-          <div class="sc-price-val">GH₵ 2,000</div>
-          <div class="sc-price-note">+ 10% of capital recovered above the 80% target</div>
-          <a class="sc-cta" href="https://wa.me/15517750655?text=Hi%2C%20I%27m%20interested%20in%20Dead%20Stock%20Clearance" target="_blank">Enquire →</a>
+        <div class="sc-value-col">
+          <div class="sc-value-icon">🧹</div>
+          <div class="sc-value-label">Fast Results</div>
+          <div class="sc-value-note">Locked capital recovered and freed up to buy again within 30 days</div>
         </div>
       </div>
     </div>
@@ -348,11 +340,10 @@ footer span{color:var(--gold)}
             <div class="sc-best">Best for: Retailers getting interest and enquiries but converting less than 20% of them to actual sales</div>
           </div>
         </div>
-        <div class="sc-price-col">
-          <div class="sc-price-label">One-Time Fee</div>
-          <div class="sc-price-val">GH₵ 1,800</div>
-          <div class="sc-price-note">Fixed · Templates yours forever</div>
-          <a class="sc-cta" href="https://wa.me/15517750655?text=Hi%2C%20I%27m%20interested%20in%20WhatsApp%20Sales%20System%20Setup" target="_blank">Get Started →</a>
+        <div class="sc-value-col">
+          <div class="sc-value-icon">📱</div>
+          <div class="sc-value-label">Sales System</div>
+          <div class="sc-value-note">Every enquiry guided to a sale, with templates that are yours forever</div>
         </div>
       </div>
     </div>
@@ -377,11 +368,10 @@ footer span{color:var(--gold)}
             <div class="sc-best">Best for: Retailers who have one specific problem and need an expert answer fast — without committing to a full service</div>
           </div>
         </div>
-        <div class="sc-price-col">
-          <div class="sc-price-label">Per Session</div>
-          <div class="sc-price-val">GH₵ 500</div>
-          <div class="sc-price-note">Pay via MoMo · Book via WhatsApp</div>
-          <a class="sc-cta" href="https://wa.me/15517750655?text=Hi%2C%20I%27d%20like%20to%20book%20a%2030-Minute%20Rapid%20Consult" target="_blank">Book Now →</a>
+        <div class="sc-value-col">
+          <div class="sc-value-icon">💬</div>
+          <div class="sc-value-label">Quick Access</div>
+          <div class="sc-value-note">A clear next action in 30 minutes — no commitment, no fluff</div>
         </div>
       </div>
     </div>
@@ -392,16 +382,14 @@ footer span{color:var(--gold)}
   <div class="bundle">
     <div class="bundle-label">Bundle Offer — Best Value</div>
     <div class="bundle-name">The Import Ready Package</div>
-    <div class="bundle-desc">The three services that solve the biggest blockers for any retailer trying to import from the US or UK. Bundled together for a saving of GH₵ 1,400 — and a complete operational setup in 3–4 weeks.</div>
+    <div class="bundle-desc">The three services that solve the biggest blockers for any retailer trying to import from the US or UK. Bundled together for a complete operational setup in 3–4 weeks — at a meaningful saving versus booking each one separately.</div>
     <div class="bundle-includes">
-      <div class="bi-tag">✓ Payment Setup — GH₵ 1,200</div>
-      <div class="bi-tag">✓ Sourcing Agent Setup — GH₵ 3,500</div>
-      <div class="bi-tag">✓ Pricing System Build — GH₵ 2,500</div>
+      <div class="bi-tag">✓ Payment Setup</div>
+      <div class="bi-tag">✓ Sourcing Agent Setup</div>
+      <div class="bi-tag">✓ Pricing System Build</div>
     </div>
     <div class="bundle-pricing">
-      <div class="bundle-was">Separately: GH₵ 7,200</div>
-      <div class="bundle-price">GH₵ 5,800</div>
-      <div class="bundle-save">Save GH₵ 1,400</div>
+      <div class="bundle-save">Bundle pricing available on request — ask us when you message</div>
     </div>
   </div>
 </section>
@@ -418,13 +406,13 @@ footer span{color:var(--gold)}
   <div class="how-steps">
     <div class="how-step"><div class="how-num">1</div><div class="how-body"><div class="how-title">Message Us on WhatsApp</div><div class="how-desc">Tell us which service you're interested in and give a brief description of your situation. We'll respond within a few hours.</div></div></div>
     <div class="how-step"><div class="how-num">2</div><div class="how-body"><div class="how-title">Quick Qualification Chat</div><div class="how-desc">We ask a few questions to confirm the service is the right fit for your specific problem and that we can deliver what you need. No hard selling — just honest matching.</div></div></div>
-    <div class="how-step"><div class="how-num">3</div><div class="how-body"><div class="how-title">Pay via Mobile Money</div><div class="how-desc">We send you our MoMo number. Once payment is confirmed, we start work immediately — usually same day or next morning.</div></div></div>
+    <div class="how-step"><div class="how-num">3</div><div class="how-body"><div class="how-title">We Walk You Through Pricing & Next Steps</div><div class="how-desc">Once we've confirmed the right fit, we'll talk through pricing and how payment works for your specific situation. Once agreed, we start work immediately — usually same day or next morning.</div></div></div>
     <div class="how-step"><div class="how-num">4</div><div class="how-body"><div class="how-title">We Deliver. You Review.</div><div class="how-desc">We complete the work to the specification agreed and deliver to you via WhatsApp or scheduled call. Any adjustments are handled promptly. No ghosting.</div></div></div>
   </div>
 
   <div class="callout gold" style="margin-top:28px">
-    <div class="callout-title">💰 All Services Paid via Mobile Money</div>
-    <div class="callout-body">MTN MoMo, Vodafone Cash, and AirtelTigo Money all accepted. No card required. No international transfer needed. Payment confirmed within minutes and work begins.</div>
+    <div class="callout-title">💰 Flexible Payment Options</div>
+    <div class="callout-body">MTN MoMo, Vodafone Cash, and AirtelTigo Money all accepted. No card required. No international transfer needed. We'll confirm the right option for you during our chat.</div>
   </div>
 
   <div class="callout teal" style="margin-top:8px">
